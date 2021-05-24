@@ -1,0 +1,19 @@
+---
+# tasks file for httpd
+
+
+- name: Add epel-release repo
+  yum:
+    name: epel-release
+    state: present
+
+- name: Install httpd
+  yum:
+    name: httpd
+    state: present
+
+- name: Add Index file
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+  notify: Start httpd

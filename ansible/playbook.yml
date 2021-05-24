@@ -1,0 +1,14 @@
+---
+
+
+- hosts: lb
+  become: yes
+  become_method: sudo
+  roles:
+    - role: nginx   
+
+- hosts: webapp
+  become: yes
+  become_method: sudo
+  roles:
+    - role: httpd
