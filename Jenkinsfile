@@ -18,7 +18,7 @@ pipeline {
 
     stage('Run Tests') {
       steps {
-        sh 'sudo $WORKSPACE/nginx_apache/tests/test_infra_poc.sh'
+        sh 'sudo $WORKSPACE/nginx_apache/nginx_apache/tests/test_infra_poc.sh'
         }  
     }
     
