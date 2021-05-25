@@ -48,8 +48,6 @@
       pull: yes
       dockerfile: /nginx/Dockerfile 
 
-      
-
 - name: Run nginx container
   docker_container:
     name: lb
@@ -57,6 +55,3 @@
     state: started
     published_ports:
       - 80:80
-
-#- name: Run nginx container
-#  command: docker run --name nginx -p 80:80 -d nginx  
