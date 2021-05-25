@@ -18,13 +18,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'cd $WORKSPACE/poc_nginx_httpd && sudo vagrant up'
+        sh 'cd $WORKSPACE/nginx_apache && sudo vagrant up'
         }    
     }
 
     stage('Run Tests') {
       steps {
-        sh 'sudo $WORKSPACE/poc_nginx_httpd/tests/test_infra_poc.sh'
+        sh 'sudo $WORKSPACE/nginx_apache/tests/test_infra_poc.sh'
         }  
     }
     
