@@ -6,7 +6,7 @@ pipeline {
       steps {
         cleanWs()
         echo 'Cloning project'
-        sh 'git clone http://192.168.1.39/root/poc_nginx_httpd.git'
+        sh 'git clone https://github.com/elucian9/nginx_apache.git'
         }
     }
     
