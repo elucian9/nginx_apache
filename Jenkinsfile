@@ -9,12 +9,6 @@ pipeline {
         sh 'git clone https://github.com/elucian9/nginx_apache.git'
         }
     }
-    
-    stage('Build printenv') {
-      steps {
-        sh 'printenv'
-        }
-    }
 
     stage('Build') {
       steps {
